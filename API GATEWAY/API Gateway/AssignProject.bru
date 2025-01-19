@@ -1,0 +1,17 @@
+meta {
+  name: AssignProject
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:9090/projects/assign
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "skills": ["Java"]
+  }
+}

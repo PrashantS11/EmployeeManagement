@@ -1,0 +1,25 @@
+meta {
+  name: Add Emp
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:9090/employees
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "firstName": "Shamal",
+      "lastName": "Sonawane",
+      "email": "shamal@gmail.com",
+      "location": "Pune",
+      "role": "SSr DEveloper",
+      "yearsOfExp": 5,
+      "dob": "11-08-1993",
+      "doj": "23-09-2024",
+      "skill": "Java,Cloud"
+  }
+}

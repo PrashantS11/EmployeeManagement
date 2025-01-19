@@ -1,0 +1,23 @@
+meta {
+  name: Add Project
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:9090/projects
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "projectName": "DDO",
+    "clientName": "CITI",
+    "durationInDays": "60",
+    "description": "Account Opening",
+    "projectStartDate": "1-5-2025",
+    "projectEndDate": "30-6-2025",
+    "skill": "Java,Kafka,Docker,Microservices"
+  }
+}

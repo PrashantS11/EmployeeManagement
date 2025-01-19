@@ -1,0 +1,15 @@
+meta {
+  name: GetEmpBySkill
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:9090/projects/emp/?skills=Cloud
+  body: none
+  auth: none
+}
+
+params:query {
+  skills: Cloud
+}

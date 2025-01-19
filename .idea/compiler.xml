@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="training-service" />
+        <module name="spring-boot-testing" />
+        <module name="api-gateway" />
+        <module name="project-service" />
+        <module name="service-registry" />
+        <module name="employee-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-gateway" target="1.5" />
+      <module name="cloud-gateway (1) (com.cloudgateway)" target="21" />
+      <module name="employee-service (1)" target="21" />
+      <module name="project-service (1)" target="21" />
+      <module name="service-registry (1)" target="21" />
+      <module name="training-service (1)" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="cloud-gateway" options="" />
+      <module name="cloud-gateway (1) (com.cloudgateway)" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="employee-service" options="-parameters" />
+      <module name="employee-service (1)" options="-parameters" />
+      <module name="project-service" options="-parameters" />
+      <module name="project-service (1)" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
+      <module name="service-registry (1)" options="-parameters" />
+      <module name="spring-boot-testing" options="-parameters" />
+      <module name="training-service" options="-parameters" />
+      <module name="training-service (1)" options="-parameters" />
+    </option>
+  </component>
+</project>
