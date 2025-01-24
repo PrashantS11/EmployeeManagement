@@ -24,6 +24,7 @@
         <module>service-registry</module>
         <module>employee-service</module>
         <module>project-service</module>
+        <module>project-mongo-service</module>
         <module>training-service</module>
         <module>api-gateway</module>
 

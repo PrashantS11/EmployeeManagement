@@ -78,8 +78,8 @@ public class EmployeeController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<EmployeeDto> updateProductFields(@PathVariable int id,@RequestBody Map<String, Object> fields){
-        log.info("EmployeeController updateProductFields - {}, {} " , id, fields );
+    public ResponseEntity<EmployeeDto> updateEmployeeByFields(@PathVariable int id,@RequestBody Map<String, Object> fields){
+        log.info("EmployeeController updateEmployeeByFields - {}, {} " , id, fields );
         EmployeeDto employeeDto1 = employeeService.updateEmployeeByFields(id,fields);
         return new ResponseEntity<>(employeeDto1, HttpStatus.OK);
     }

@@ -27,12 +27,16 @@ public class EmployeeService {
 
     private EmployeeRepository employeeRepository;
     private ProjectFeignClient projectFeignClient;
-
+    public KafkaProducerService kafkaProducerService;
+    public AuditService auditService;
     private ModelMapper modelMapper;
+
     public EmployeeDto saveEmployee(EmployeeDto employeeDto) {
         log.info("EmployeeService saveEmployee - {}" , employeeDto);
         Employee employee = modelMapper.map(employeeDto, Employee.class);
         Employee saveEmployee = employeeRepository.save(employee);
+        auditService.logAction("Add", "Employee added: " + saveEmployee.getId());
+        kafkaProducerService.sendMessage("Employee added: " + saveEmployee.getId());
         return modelMapper.map(employee, EmployeeDto.class);
     }
 
